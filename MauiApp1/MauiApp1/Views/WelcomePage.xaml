@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.WelcomePage"
+             BackgroundColor="{StaticResource BackgroundLight}">
+
+    <Grid
+        RowDefinitions="*,Auto"
+        RowSpacing="0"
+        Padding="0">
+
+        <!-- Content Area -->
+        <VerticalStackLayout
+            Grid.Row="0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Spacing="0"
+            Padding="30">
+
+            <!-- App Icon -->
+            <Border
+                BackgroundColor="{StaticResource PrimaryGreen}"
+                Padding="0"
+                WidthRequest="120"
+                HeightRequest="120"
+                HorizontalOptions="Center"
+                Margin="0,0,0,20"
+                SemanticProperties.Description="Логотип додатка Together">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Grid
+                    WidthRequest="120"
+                    HeightRequest="120"
+                    Padding="0">
+                    <Label
+                        Text="☑"
+                        FontSize="60"
+                        TextColor="{StaticResource TextLight}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" 
+                        SemanticProperties.Description=""/>
+                </Grid>
+            </Border>
+
+            <!-- Title -->
+            <Label
+                Text="Together"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="{StaticResource TextPrimary}"
+                HorizontalTextAlignment="Center"
+                Margin="0,0,0,10"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <!-- Subtitle -->
+            <Label
+                Text="Сімейний органайзер"
+                FontSize="16"
+                TextColor="{StaticResource TextSecondary}"
+                HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <!-- Get Started Button -->
+        <Button
+            Grid.Row="1"
+            Text="Почати"
+            BackgroundColor="{StaticResource PrimaryGreen}"
+            TextColor="{StaticResource TextLight}"
+            FontAttributes="Bold"
+            FontSize="16"
+            Padding="20"
+            Margin="20"
+            CornerRadius="10"
+            Clicked="OnGetStartedClicked"
+            HorizontalOptions="Fill" />
+    </Grid>
+</ContentPage>
