@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.WelcomePage"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource BackgroundLight}">
 
     <Grid
@@ -24,25 +25,20 @@
                 WidthRequest="120"
                 HeightRequest="120"
                 HorizontalOptions="Center"
-                Margin="0,0,0,20"
-                SemanticProperties.Description="Логотип додатка Together">
+                Margin="0,0,0,20">
 
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-                <Grid
-                    WidthRequest="120"
-                    HeightRequest="120"
-                    Padding="0">
-                    <Label
-                        Text="☑"
-                        FontSize="60"
-                        TextColor="{StaticResource TextLight}"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center" 
-                        SemanticProperties.Description=""/>
-                </Grid>
+                <Image
+                    Source="parents_64.png" 
+                    WidthRequest="60"  
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Aspect="AspectFit"/>
+
             </Border>
 
             <!-- Title -->

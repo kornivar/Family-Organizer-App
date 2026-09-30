@@ -1,4 +1,6 @@
-﻿namespace MauiApp1
+﻿using MauiApp1.Views;
+
+namespace MauiApp1
 {
     public partial class WelcomePage : ContentPage
     {
@@ -9,10 +11,9 @@
             InitializeComponent();
         }
 
-        private void OnGetStartedClicked(object? sender, EventArgs e)
+        private async void OnGetStartedClicked(object? sender, EventArgs e)
         {
-            Console.WriteLine("Get Started button clicked");
-            //await Shell.Current.GoToAsync("LoginPage");
+            await Shell.Current.GoToAsync(nameof(AuthPage));
         }
     }
 }
